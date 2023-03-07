@@ -52,6 +52,7 @@ public class _01_StringMethods {
 	// to underscores
 	public static String formatSpaces(String s) {
 		String str = s;
+		
 		if (s.contains("underscores")) {
 			str = s.replace(' ', '_');
 
@@ -66,8 +67,35 @@ public class _01_StringMethods {
 	// assume there is only one space between the first and last name
 	public static String lineLeader(String s1, String s2, String s3) {
 		String first = "";
+String s1a = s1.trim();
+String[] s1as = s1a.split(" ");
+String s2a = s2.trim();
+String[] s2as = s2a.split(" ");
+String s3a = s3.trim();
+String[] s3as = s3a.split(" ");
 
+ if (s1as[1].compareTo(s3as[1])<0) {
+	 
+	if (s1as[1].compareTo(s2as[1])<0) {
+		first = s1a;
+		
+	}
+}
+ if (s2as[1].compareTo(s1as[1])<0) {
+	if (s2as[1].compareTo(s3as[1])<0) {
+		first = s2a;
+		
+	}
+}
+ if (s3as[1].compareTo(s2as[1])<0) {
 	
+	if (s3as[1].compareTo(s1as[1])<0) {
+		first = s3a;
+		
+	}
+}
+
+	         
 		return first;
 	}
 
